@@ -60,8 +60,18 @@ npm run build   # Build for production
 npm run preview # Preview production build
 ```
 
+## Deployment
+- Deployed to GitHub Pages via GitHub Actions
+- Workflow: `.github/workflows/deploy.yml`
+- Triggers on push to `main` branch or manual dispatch
+- Deploys to `https://<username>.github.io/analises/`
+- Base path configured in `vite.config.js` as `/analises/`
+
 ## File Structure
 ```
+.github/
+  workflows/
+    deploy.yml            # GitHub Actions workflow for GitHub Pages
 src/
   components/           # React components
     BiomarkerTable.jsx  # Main table with TanStack Table (resizing, visibility)
