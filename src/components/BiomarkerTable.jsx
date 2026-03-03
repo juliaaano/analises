@@ -162,12 +162,12 @@ export function BiomarkerTable({ reports, onImportClick }) {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto border border-gray-200 rounded-lg">
+      <div className="overflow-auto max-h-[calc(100vh-8rem)] border border-gray-200 rounded-lg">
         <table
           className="divide-y divide-gray-200"
           style={{ width: table.getTotalSize(), tableLayout: 'fixed' }}
         >
-          <thead className="bg-gray-50">
+          <thead className="bg-gray-50 sticky top-0 z-10">
             {table.getHeaderGroups().map(headerGroup => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map(header => {
