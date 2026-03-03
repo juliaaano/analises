@@ -6,6 +6,7 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 import { transformToMatrix, getColumnKey, getAllBiomarkers } from '../utils/transformData';
+import { isRegistered } from '../utils/biomarkerRegistry';
 import { ResultCell } from './ResultCell';
 import { BiomarkerFilter } from './BiomarkerFilter';
 import { ColumnToggle } from './ColumnToggle';
@@ -42,12 +43,15 @@ export function BiomarkerTable({ reports, onImportClick }) {
     return Math.max(150, Math.min(350, longestName.length * 7 + 16));
   }, [allBiomarkers]);
 
-  // Filter rows based on selected biomarkers
+  // Filter rows based on selected biomarkers and add registration status
   const filteredRows = useMemo(() => {
-    if (selectedBiomarkers.length === 0) {
-      return rows;
-    }
-    return rows.filter(row => selectedBiomarkers.includes(row.biomarker));
+    const base = selectedBiomarkers.length === 0
+      ? rows
+      : rows.filter(row => selectedBiomarkers.includes(row.biomarker));
+    return base.map(row => ({
+      ...row,
+      _isRegistered: isRegistered(row.biomarker),
+    }));
   }, [rows, selectedBiomarkers]);
 
   // Define table columns
@@ -61,9 +65,36 @@ export function BiomarkerTable({ reports, onImportClick }) {
         minSize: 100,
         maxSize: 400,
         meta: { isBiomarkerColumn: true },
-        cell: info => (
-          <span className="font-medium text-gray-900 whitespace-nowrap">{info.getValue()}</span>
-        ),
+        cell: info => {
+          const registered = info.row.original._isRegistered;
+          return (
+            <span className="font-medium whitespace-nowrap inline-flex items-center gap-1">
+              {!registered && (
+                <span className="relative group">
+                  <svg
+                    className="w-4 h-4 text-amber-500 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    />
+                  </svg>
+                  <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-20">
+                    Biomarker not found in registry
+                  </span>
+                </span>
+              )}
+              <span className={registered ? 'text-gray-900' : 'text-gray-400'}>
+                {info.getValue()}
+              </span>
+            </span>
+          );
+        },
         enableHiding: false,
       },
     ];
@@ -172,7 +203,15 @@ export function BiomarkerTable({ reports, onImportClick }) {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {table.getRowModel().rows.map(row => (
-              <tr key={row.id} className="hover:bg-gray-50">
+              <tr
+                key={row.id}
+                className={
+                  row.original._isRegistered
+                    ? 'hover:bg-gray-50'
+                    : 'bg-amber-50/50 hover:bg-amber-50'
+                }
+                title={row.original._isRegistered ? undefined : 'Biomarker not found in registry'}
+              >
                 {row.getVisibleCells().map(cell => {
                   const isBiomarker = cell.column.columnDef.meta?.isBiomarkerColumn;
                   return (

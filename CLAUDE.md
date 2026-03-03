@@ -13,6 +13,13 @@ A React SPA that displays health biomarker data from laboratory reports in a mat
 - JSON format with `reports` array (schema available at parent directory: `health_data_schema.json`)
 - Data is held in React state (not persisted between sessions)
 
+## Biomarker Registry
+- `biomarkers.txt` at project root defines the display order of biomarkers
+- Plain text file, one biomarker name per line — line position determines sort order
+- Imported at build time via Vite `?raw` import (inlined into bundle, no runtime fetch)
+- Parsed by `src/utils/biomarkerRegistry.js`
+- Biomarkers in imported data that are **not** in the registry appear last (sorted alphabetically) with visual warnings: amber-tinted row, warning icon, and tooltip
+
 ## Key Conventions
 
 ### Data Import
@@ -72,6 +79,7 @@ npm run preview # Preview production build
 .github/
   workflows/
     deploy.yml            # GitHub Actions workflow for GitHub Pages
+biomarkers.txt              # Biomarker registry (display order, one name per line)
 src/
   components/           # React components
     BiomarkerTable.jsx  # Main table with TanStack Table (resizing, visibility)
@@ -80,6 +88,7 @@ src/
     JsonPasteModal.jsx  # Modal for pasting JSON data
     ResultCell.jsx      # Cell renderer (result, unit, reference - centered)
   utils/
+    biomarkerRegistry.js # Parses biomarkers.txt, exports isRegistered() and sortBiomarkers()
     transformData.js    # Data transformation (sorting, matrix conversion)
   App.jsx               # Main app layout with data state and empty state
   index.css             # Tailwind CSS import
@@ -99,11 +108,17 @@ src/
 - Shows error messages for invalid JSON
 - Clears state on close/submit
 
+### biomarkerRegistry.js
+- Imports `biomarkers.txt` via Vite `?raw` at build time
+- Parses plain-text line list into a `Map<name, lineIndex>` for ordering
+- `isRegistered(name)`: Returns whether a biomarker is in the registry
+- `sortBiomarkers(names[])`: Sorts by registry order; unregistered go last alphabetically
+
 ### transformData.js
 - `parseDate(dateStr)`: Parses "D-MMM-YYYY" format dates
 - `getColumnKey(report)`: Generates unique column ID from date + lab name
-- `transformToMatrix(reports)`: Converts reports array to matrix format, sorted newest first
-- `getAllBiomarkers(reports)`: Extracts all unique biomarker names
+- `transformToMatrix(reports)`: Converts reports array to matrix format, sorted newest first, rows ordered by biomarker registry
+- `getAllBiomarkers(reports)`: Extracts all unique biomarker names, sorted by registry order
 
 ### BiomarkerTable.jsx
 - Uses TanStack Table with `enableColumnResizing: true` and `columnResizeMode: 'onChange'`
@@ -111,6 +126,7 @@ src/
 - Uses `meta.isBiomarkerColumn` to apply different styling to first column
 - Table uses `tableLayout: 'fixed'` for predictable column widths
 - "Import Data" button in toolbar with upload icon (matches Columns button style)
+- Unregistered biomarkers: row has `_isRegistered` flag, amber-tinted background, warning SVG icon with CSS tooltip, grayed-out name text
 
 ### ResultCell.jsx
 - Renders result value (bold), unit, and reference range

@@ -1,3 +1,5 @@
+import { sortBiomarkers } from './biomarkerRegistry';
+
 /**
  * Parse date string in format "D-MMM-YYYY" (e.g., "8-Sep-2025")
  * @param {string} dateStr
@@ -46,7 +48,8 @@ export function transformToMatrix(reports) {
   });
 
   // Create rows where each row is a biomarker with results from each report
-  const rows = Array.from(biomarkerSet).map(biomarkerName => {
+  const orderedBiomarkers = sortBiomarkers(Array.from(biomarkerSet));
+  const rows = orderedBiomarkers.map(biomarkerName => {
     const row = { biomarker: biomarkerName };
 
     sortedReports.forEach(report => {
@@ -80,5 +83,5 @@ export function getAllBiomarkers(reports) {
       biomarkerSet.add(result.name);
     });
   });
-  return Array.from(biomarkerSet).sort();
+  return sortBiomarkers(Array.from(biomarkerSet));
 }

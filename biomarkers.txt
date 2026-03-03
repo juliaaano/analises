@@ -1,0 +1,182 @@
+Eritrócitos
+Hemoglobina
+Hematócrito
+Vol. Glob. Médio (VGM)
+Hem. Glob. Média (HGM)
+Conc. Hem. Glob. Média (CHGM)
+Ampl. Distrib. Eritr. (RDW)
+Leucócitos
+Neutrófilos
+Linfócitos
+Monócitos
+Eosinófilos
+Basófilos
+Plaquetas
+Velocidade de Sedimentação (VS)
+Reticulócitos
+Reticulócitos Valor Absoluto
+Hemoglobina Reticulocitária
+Ferro Sérico / Siderémia
+Capacidade Total Fixação Ferro
+Ferritina
+Transferrina
+Indice Saturação da Transferrina
+Vitamina B12
+Ácido Fólico
+Glicose / Glucose / Glicémia
+HbA1c (NGSP/DCCT)
+HbA1c (IFCC)
+Glicémia estimada
+Ureia / Urémia
+Creatinina / Creatininémia
+TFGe [CKD-EPI 2009]
+AST / TGO - Aspartato Aminotransferase
+ALT / TGP - Alanina Aminotransferase
+Gama-Glutamiltransferase - GGT
+Triglicéridos
+Colesterol Total
+Colesterol HDL
+Colesterol LDL
+Colesterol HDL Índice Aterogénico
+Sódio (Na+) / Natrémia
+Potássio (K+) / Kaliémia
+Cuprémia
+Magnésio Eritrociário
+Vitamina D - 25(OH) D Total
+Vitamina A - Retinol
+Selénio / no soro
+Zinco / Sérico
+Homocisteína
+Calcémia
+Proteína C Reactiva
+Uricémia (Cinético Urease)
+Tiroestimulina TSH
+Paratormona - iPTH
+FSH - Hormona Folículoestimulante
+LH - Hormona Luteotrófica
+Testosterona Total / Plasmática (TT)
+Glob. Lig. Hormonas Sexuais - SHBG
+Tiroxina Livre (FT4)
+Triiodotironina Livre (FT3)
+17 Beta Estradiol
+Sulfato de Dehidroepiandrosterona
+Cortisol Plamático Basal
+Insulina / Insulinémia
+Dihidrotestosterona - DHT
+Urina - pH
+Urina - Densidade
+Urina - Nitritos
+Urina - Proteínas
+Urina - Glicose
+Urina - Corpos cetónicos
+Urina - Urobilinogénio
+Urina - Bilirrubina
+Urina - Hemoglobina
+Urina - Leucócitos
+Urina - (Sedimento) - Células Epiteliais
+Urina - (Sedimento) - Leucócitos
+Urina - (Sedimento) - Eritrócitos
+Urina - Proteínas Totais
+Urina (Microbiologia) Gram
+Urina (Microbiologia) - Exame Cultural
+Urina - Albumina
+Urina - Cor
+Urina - Aspecto
+Urina - Globulina Alfa 1
+Urina - Globulina Alfa 2
+Anti-EBV (VCA) IgG
+Anti-EBV (VCA) IgM
+Ac. Anti-CMV (IgG)
+Ac. Anti-CMV (IgM)
+Anticoag. Lúpico (razão)
+Anticorpos Anti-Cardiolipina (ACA) IgA
+Anticorpos Anti-Beta-2-Glicoproteína I IgA
+Anticorpos Anti-Cardiolipina (ACA) IgG
+Anticorpos Anti-Cardiolipina (ACA) IgM
+Antigénios Leucocitários (HLA) Tipagem HLA B27
+Desidrogenase Láctica (LDH)
+Creatinaquinase Total (CK Total)
+Enzima Conversora Angiotensina (ECA)
+Fracção C3 do Complemento
+Fracção C4 do Complemento
+Imunoglobulina G Sérica
+Imunoglobulina A Sérica
+Imunoglobulina M Sérica
+Imunoglobulina D Sérica
+Cadeias Kappa
+Cadeias Lambda
+Anticorpos Antinucleares (ANAs)
+Imunocomplexo Circulantes
+Ac. Anti-Citoplasma de Neutrófilos (ANCA's) IgG
+Ac. Anti Proteinase 3 (PR3) [c-ANCA]
+Anticorpo Anti-Mieloperoxidase (MPO) [p-ANCA]
+Sindromas Reumatóides Factor Reumatoide
+Ac. Anti-Células Parietais do Estômago (APCA)
+Anticorpo Anti-Factor Intrínseco (FI)
+Imunoglobulina E Total
+Reacção VDRL
+Antigénio HBs
+Anticorpo HBs
+Anticorpo HBc Total
+Anticorpo HBe
+Anticorpo HCV
+Anticorpo Anti-Parvovírus IgG
+Anticorpo Anti-Parvovírus IgM
+Série Eritrocitária
+Série Leucocitária
+Série Plaquetária
+Bilirrubinémia Total
+Bilirrubinémia Directa
+Bilirrubinémia Indirecta
+Cloretos (Cl-) / Clorémia
+Magnésio / Magnesiémia
+Vitamina D3 - 1.25 Dihidroxicolecalciferol
+Vitamina C - Ácido Ascórbico
+Ac. Anti-Tiroperoxidase (anti-TPO)
+Ac. Anti-Tiroglobulina (anti-TG)
+Testosterona Livre
+hGH - Hormona do Crescimento - Somatotrofina
+Fosfatase Alcalina
+Lipoproteína a - Lpa
+Apolipoproteína A1
+Apolipoproteína B
+PSA Livre - Ag. Específico da Próstata
+Razão PSA Livre / PSA Total
+Vitamina B1 - Pirofosfato de Tiamina
+Apolipoproteína E
+Fosfatémia (Fosfomolibdato)
+Cálcio Total
+Cálcio Ionizado
+Vitamina B6 (Fosfato de Piridoxal)
+Vitamina E (Alfa Tocoferol)
+Vitamina B2 (FAD)
+Vitamina K1
+Dehidroepiandrosterona sérica [DHEA]
+IGF 1 - Somatomedina C / Somatomedina (IGF1) Basal
+Globulina Alfa 1
+Globulina Alfa 2
+Globulina Beta 1
+Globulina Beta 2
+Globulina Gama
+Relação Albumina/Globulina
+Tempo Protrombina (TP)
+Tempo Protrombina INR
+T de Tromboplastina Parcial activ. (aPTT)
+Microalbuminúria Micção (Ocasional)
+Microalbuminúria (Turbidimetria)
+Razão Albuminúria/Creatinúria
+Ácido Úrico
+Fósforo Inorgânico
+Cobre Sérico
+Chumbo
+Mercúrio no sangue (Hg)
+Proteína C Reactiva (PCR)
+Proteína C Reactiva (unidades SI)
+PSA - Antigénio Específico da Próstata
+ACTH - Adrenocorticotrofina
+Prolactina
+Dehidroepiandrosterona - DHEA
+DHEA-SO4 - Dehidroepiandrosterona
+Índice de Resistência à Insulina (HOMA-RI)
+Taxa Protrombina
+Fibrinogénio
