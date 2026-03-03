@@ -36,7 +36,7 @@ export function ColumnToggle({ table }) {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-10 max-h-80 overflow-y-auto">
+        <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-20 max-h-80 overflow-y-auto">
           <div className="p-2 border-b border-gray-200">
             <label className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
               <input

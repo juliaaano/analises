@@ -60,7 +60,7 @@ export function BiomarkerFilter({ biomarkers, selectedBiomarkers, onSelectionCha
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+        <div className="absolute left-0 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-20">
           <div className="p-2 border-b border-gray-200">
             <input
               type="text"
