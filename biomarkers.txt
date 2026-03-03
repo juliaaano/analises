@@ -47,7 +47,8 @@ Vitamina A - Retinol
 Selénio / no soro
 Zinco / Sérico
 Homocisteína
-Calcémia
+Calcémia / Cálcio Total
+Cálcio Ionizado
 Proteína C Reactiva
 Uricémia (Cinético Urease)
 Tiroestimulina TSH
@@ -145,8 +146,6 @@ Razão PSA Livre / PSA Total
 Vitamina B1 - Pirofosfato de Tiamina
 Apolipoproteína E
 Fosfatémia (Fosfomolibdato)
-Cálcio Total
-Cálcio Ionizado
 Vitamina B6 (Fosfato de Piridoxal)
 Vitamina E (Alfa Tocoferol)
 Vitamina B2 (FAD)
