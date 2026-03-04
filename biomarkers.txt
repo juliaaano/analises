@@ -1,74 +1,175 @@
-Hemoglobina
+#Série Eritrocitária
 Eritrócitos
+Hemoglobina
 Hematócrito
 Vol. Glob. Médio (VGM)
 Hem. Glob. Média (HGM)
 Conc. Hem. Glob. Média (CHGM)
 Ampl. Distrib. Eritr. (RDW)
+#Série Leucocitária
 Leucócitos
 Neutrófilos
-Eosinófilos
-Basófilos
 Linfócitos
 Monócitos
+Eosinófilos
+Basófilos
+#Série Plaquetária
 Plaquetas
-Vitamina B12
-Ácido Fólico
-Ferritina
+Reticulócitos
+Reticulócitos Valor Absoluto
+Hemoglobina Reticulocitária
+Velocidade de Sedimentação (VS)
+Proteína C Reactiva
+
+Ferro Sérico / Siderémia
 Capacidade Total Fixação Ferro
 Transferrina
-Ferro Sérico / Siderémia
+Indice Saturação da Transferrina
+Ferritina
+Vitamina B12
+Ácido Fólico
+Homocisteína
+
 Glicose / Glucose / Glicémia
+Insulina / Insulinémia
+Índice de Resistência à Insulina (HOMA-RI)
 HbA1c (NGSP/DCCT)
 HbA1c (IFCC)
 Glicémia estimada
-Insulina / Insulinémia
-Colesterol Total
-Colesterol LDL
-Colesterol HDL
-Triglicéridos
-Apolipoproteína A1
-Apolipoproteína B
-Proteína C Reactiva
-Uricémia (Cinético Urease)
+
 Ureia / Urémia
 Creatinina / Creatininémia
 TFGe [CKD-EPI 2009]
+Ácido Úrico
+Uricémia (Cinético Urease)
+
 AST / TGO - Aspartato Aminotransferase
 ALT / TGP - Alanina Aminotransferase
 Gama-Glutamiltransferase - GGT
-Cálcio Ionizado
-Paratormona - iPTH
-Vitamina D - 25(OH) D Total
+Fosfatase Alcalina
+Bilirrubinémia Total
+Bilirrubinémia Directa
+Bilirrubinémia Indirecta
+
+Colesterol Total
+Colesterol HDL
+Colesterol LDL
+Triglicéridos
+#Colesterol HDL Índice Aterogénico
+Apolipoproteína A1
+Apolipoproteína B
+Lipoproteína a - Lpa
+Apolipoproteína E
+
 Sódio (Na+) / Natrémia
 Potássio (K+) / Kaliémia
 Cloretos (Cl-) / Clorémia
+Calcémia / Cálcio Total
+Cálcio Ionizado
+Magnésio / Magnesiémia
+Fosfatémia (Fosfomolibdato)
+Fósforo Inorgânico
+
+Desidrogenase Láctica (LDH)
+Creatinaquinase Total (CK Total)
+Enzima Conversora Angiotensina (ECA)
+
 Cuprémia
+Cobre Sérico
+Zinco / Sérico
 Selénio / no soro
+Chumbo
+Mercúrio no sangue (Hg)
+Magnésio Eritrociário
+
+Vitamina D - 25(OH) D Total
+Vitamina D3 - 1.25 Dihidroxicolecalciferol
 Vitamina A - Retinol
 Vitamina C - Ácido Ascórbico
-Homocisteína
+Vitamina E (Alfa Tocoferol)
+Vitamina K1
+Vitamina B1 - Pirofosfato de Tiamina
+Vitamina B2 (FAD)
+Vitamina B6 (Fosfato de Piridoxal)
+
 Tiroestimulina TSH
 Tiroxina Livre (FT4)
 Triiodotironina Livre (FT3)
-Sulfato de Dehidroepiandrosterona
 FSH - Hormona Folículoestimulante
 LH - Hormona Luteotrófica
 17 Beta Estradiol
 Testosterona Total / Plasmática (TT)
-Dihidrotestosterona - DHT
+Testosterona Livre
 Glob. Lig. Hormonas Sexuais - SHBG
-
-Velocidade de Sedimentação (VS)
-Reticulócitos
-Reticulócitos Valor Absoluto
-Hemoglobina Reticulocitária
-Indice Saturação da Transferrina
-Colesterol HDL Índice Aterogénico
-Magnésio Eritrociário
-Zinco / Sérico
-Calcémia / Cálcio Total
+Dihidrotestosterona - DHT
+Sulfato de Dehidroepiandrosterona
+DHEA - Dehidroepiandrosterona
+DHEA-SO4 - Dehidroepiandrosterona
+Paratormona - iPTH
+Ac. Anti-Tiroperoxidase (anti-TPO)
+Ac. Anti-Tiroglobulina (anti-TG)
 Cortisol Plamático Basal
+ACTH - Adrenocorticotrofina
+hGH - Hormona do Crescimento
+IGF 1 - Somatomedina C (IGF1) Basal
+Prolactina
+
+Tempo Protrombina (TP)
+Tempo Protrombina INR
+Taxa Protrombina
+T de Tromboplastina Parcial activ. (aPTT)
+Fibrinogénio
+
+PSA - Antigénio Específico da Próstata
+PSA Livre - Ag. Específico da Próstata
+Razão PSA Livre / PSA Total
+
+Fracção C3 do Complemento
+Fracção C4 do Complemento
+Imunoglobulina G Sérica
+Imunoglobulina A Sérica
+Imunoglobulina M Sérica
+Imunoglobulina D Sérica
+Imunoglobulina E Total
+Cadeias Kappa
+Cadeias Lambda
+Globulina Alfa 1
+Globulina Alfa 2
+Globulina Beta 1
+Globulina Beta 2
+Globulina Gama
+Relação Albumina/Globulina
+Imunocomplexo Circulantes
+Anticorpos Antinucleares (ANAs)
+Ac. Anti-Citoplasma de Neutrófilos (ANCA's) IgG
+Ac. Anti Proteinase 3 (PR3) [c-ANCA]
+Anticorpo Anti-Mieloperoxidase (MPO) [p-ANCA]
+Sindromas Reumatóides Factor Reumatoide
+Anticoag. Lúpico (razão)
+Anticorpos Anti-Cardiolipina (ACA) IgA
+Anticorpos Anti-Cardiolipina (ACA) IgG
+Anticorpos Anti-Cardiolipina (ACA) IgM
+Anticorpos Anti-Beta-2-Glicoproteína I IgA
+Antigénios Leucocitários (HLA) Tipagem HLA B27
+
+Ac. Anti-Células Parietais do Estômago (APCA)
+Anticorpo Anti-Factor Intrínseco (FI)
+
+Anti-EBV (VCA) IgG
+Anti-EBV (VCA) IgM
+Ac. Anti-CMV (IgG)
+Ac. Anti-CMV (IgM)
+Reacção VDRL
+Antigénio HBs
+Anticorpo HBs
+Anticorpo HBc Total
+Anticorpo HBe
+Anticorpo HCV
+Anticorpo Anti-Parvovírus IgG
+Anticorpo Anti-Parvovírus IgM
+
+Urina - Cor
+Urina - Aspecto
 Urina - pH
 Urina - Densidade
 Urina - Nitritos
@@ -83,100 +184,11 @@ Urina - (Sedimento) - Células Epiteliais
 Urina - (Sedimento) - Leucócitos
 Urina - (Sedimento) - Eritrócitos
 Urina - Proteínas Totais
-Urina (Microbiologia) Gram
-Urina (Microbiologia) - Exame Cultural
 Urina - Albumina
-Urina - Cor
-Urina - Aspecto
-Urina - Globulina Alfa 1
-Urina - Globulina Alfa 2
-Anti-EBV (VCA) IgG
-Anti-EBV (VCA) IgM
-Ac. Anti-CMV (IgG)
-Ac. Anti-CMV (IgM)
-Anticoag. Lúpico (razão)
-Anticorpos Anti-Cardiolipina (ACA) IgA
-Anticorpos Anti-Beta-2-Glicoproteína I IgA
-Anticorpos Anti-Cardiolipina (ACA) IgG
-Anticorpos Anti-Cardiolipina (ACA) IgM
-Antigénios Leucocitários (HLA) Tipagem HLA B27
-Desidrogenase Láctica (LDH)
-Creatinaquinase Total (CK Total)
-Enzima Conversora Angiotensina (ECA)
-Fracção C3 do Complemento
-Fracção C4 do Complemento
-Imunoglobulina G Sérica
-Imunoglobulina A Sérica
-Imunoglobulina M Sérica
-Imunoglobulina D Sérica
-Cadeias Kappa
-Cadeias Lambda
-Anticorpos Antinucleares (ANAs)
-Imunocomplexo Circulantes
-Ac. Anti-Citoplasma de Neutrófilos (ANCA's) IgG
-Ac. Anti Proteinase 3 (PR3) [c-ANCA]
-Anticorpo Anti-Mieloperoxidase (MPO) [p-ANCA]
-Sindromas Reumatóides Factor Reumatoide
-Ac. Anti-Células Parietais do Estômago (APCA)
-Anticorpo Anti-Factor Intrínseco (FI)
-Imunoglobulina E Total
-Reacção VDRL
-Antigénio HBs
-Anticorpo HBs
-Anticorpo HBc Total
-Anticorpo HBe
-Anticorpo HCV
-Anticorpo Anti-Parvovírus IgG
-Anticorpo Anti-Parvovírus IgM
-Série Eritrocitária
-Série Leucocitária
-Série Plaquetária
-Bilirrubinémia Total
-Bilirrubinémia Directa
-Bilirrubinémia Indirecta
-Magnésio / Magnesiémia
-Vitamina D3 - 1.25 Dihidroxicolecalciferol
-Ac. Anti-Tiroperoxidase (anti-TPO)
-Ac. Anti-Tiroglobulina (anti-TG)
-Testosterona Livre
-hGH - Hormona do Crescimento - Somatotrofina
-Fosfatase Alcalina
-Lipoproteína a - Lpa
-PSA Livre - Ag. Específico da Próstata
-Razão PSA Livre / PSA Total
-Vitamina B1 - Pirofosfato de Tiamina
-Apolipoproteína E
-Fosfatémia (Fosfomolibdato)
-Vitamina B6 (Fosfato de Piridoxal)
-Vitamina E (Alfa Tocoferol)
-Vitamina B2 (FAD)
-Vitamina K1
-Dehidroepiandrosterona sérica [DHEA]
-IGF 1 - Somatomedina C / Somatomedina (IGF1) Basal
-Globulina Alfa 1
-Globulina Alfa 2
-Globulina Beta 1
-Globulina Beta 2
-Globulina Gama
-Relação Albumina/Globulina
-Tempo Protrombina (TP)
-Tempo Protrombina INR
-T de Tromboplastina Parcial activ. (aPTT)
 Microalbuminúria Micção (Ocasional)
 Microalbuminúria (Turbidimetria)
 Razão Albuminúria/Creatinúria
-Ácido Úrico
-Fósforo Inorgânico
-Cobre Sérico
-Chumbo
-Mercúrio no sangue (Hg)
-Proteína C Reactiva (PCR)
-Proteína C Reactiva (unidades SI)
-PSA - Antigénio Específico da Próstata
-ACTH - Adrenocorticotrofina
-Prolactina
-Dehidroepiandrosterona - DHEA
-DHEA-SO4 - Dehidroepiandrosterona
-Índice de Resistência à Insulina (HOMA-RI)
-Taxa Protrombina
-Fibrinogénio
+Urina - Globulina Alfa 1
+Urina - Globulina Alfa 2
+Urina (Microbiologia) Gram
+Urina (Microbiologia) - Exame Cultural
