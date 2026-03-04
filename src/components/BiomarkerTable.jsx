@@ -6,7 +6,7 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 import { transformToMatrix, getColumnKey, getAllBiomarkers } from '../utils/transformData';
-import { isRegistered } from '../utils/biomarkerRegistry';
+import { isRegistered, getAttentionLevel } from '../utils/biomarkerRegistry';
 import { ResultCell } from './ResultCell';
 import { BiomarkerFilter } from './BiomarkerFilter';
 import { ColumnToggle } from './ColumnToggle';
@@ -21,7 +21,7 @@ export function BiomarkerTable({ reports, onImportClick }) {
   const [selectedBiomarkers, setSelectedBiomarkers] = useState([]);
   const [columnSizing, setColumnSizing] = useState({});
   const [hideUnits, setHideUnits] = useState(false);
-  const [hideReferences, setHideReferences] = useState(false);
+  const [hideReferences, setHideReferences] = useState(true);
 
   // Transform data to matrix format
   const { columns: reportColumns, rows } = useMemo(
@@ -53,6 +53,7 @@ export function BiomarkerTable({ reports, onImportClick }) {
     return base.map(row => ({
       ...row,
       _isRegistered: isRegistered(row.biomarker),
+      _attentionLevel: getAttentionLevel(row.biomarker),
     }));
   }, [rows, selectedBiomarkers]);
 
@@ -238,9 +239,13 @@ export function BiomarkerTable({ reports, onImportClick }) {
               <tr
                 key={row.id}
                 className={
-                  row.original._isRegistered
-                    ? 'hover:bg-gray-50'
-                    : 'bg-amber-50/50 hover:bg-amber-50'
+                  !row.original._isRegistered
+                    ? 'bg-amber-50/50 hover:bg-amber-50'
+                    : row.original._attentionLevel === 2
+                      ? 'bg-red-100 hover:bg-red-200'
+                      : row.original._attentionLevel === 1
+                        ? 'bg-amber-100 hover:bg-amber-200'
+                        : 'hover:bg-gray-50'
                 }
                 title={row.original._isRegistered ? undefined : 'Biomarker not found in registry'}
               >

@@ -7,7 +7,7 @@ Hem. Glob. Média (HGM)
 Conc. Hem. Glob. Média (CHGM)
 Ampl. Distrib. Eritr. (RDW)
 #Série Leucocitária
-Leucócitos
+Leucócitos*
 Neutrófilos
 Linfócitos
 Monócitos
@@ -19,16 +19,16 @@ Reticulócitos
 Reticulócitos Valor Absoluto
 Hemoglobina Reticulocitária
 Velocidade de Sedimentação (VS)
-Proteína C Reactiva
+Proteína C Reactiva*
 
 Ferro Sérico / Siderémia
 Capacidade Total Fixação Ferro
 Transferrina
 Indice Saturação da Transferrina
-Ferritina
-Vitamina B12
+Ferritina*
+Vitamina B12**
 Ácido Fólico
-Homocisteína
+Homocisteína*
 
 Glicose / Glucose / Glicémia
 Insulina / Insulinémia
@@ -51,7 +51,7 @@ Bilirrubinémia Total
 Bilirrubinémia Directa
 Bilirrubinémia Indirecta
 
-Colesterol Total
+Colesterol Total*
 Colesterol HDL
 Colesterol LDL
 Triglicéridos
@@ -82,7 +82,7 @@ Chumbo
 Mercúrio no sangue (Hg)
 Magnésio Eritrociário
 
-Vitamina D - 25(OH) D Total
+Vitamina D - 25(OH) D Total*
 Vitamina D3 - 1.25 Dihidroxicolecalciferol
 Vitamina A - Retinol
 Vitamina C - Ácido Ascórbico
@@ -97,10 +97,10 @@ Tiroxina Livre (FT4)
 Triiodotironina Livre (FT3)
 FSH - Hormona Folículoestimulante
 LH - Hormona Luteotrófica
-17 Beta Estradiol
+17 Beta Estradiol**
 Testosterona Total / Plasmática (TT)
 Testosterona Livre
-Glob. Lig. Hormonas Sexuais - SHBG
+Glob. Lig. Hormonas Sexuais - SHBG**
 Dihidrotestosterona - DHT
 Sulfato de Dehidroepiandrosterona
 DHEA - Dehidroepiandrosterona

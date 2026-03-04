@@ -1,17 +1,29 @@
 import registryRaw from '../../biomarkers.txt?raw';
 
 /**
- * Registry of known biomarkers with their display order.
+ * Registry of known biomarkers with their display order and attention level.
  * Parsed at build time from biomarkers.txt via Vite ?raw import.
+ *
+ * Trailing asterisks on a name set the attention level:
+ *   * = 1 (light yellow), ** = 2 (light red)
  */
 const biomarkerOrder = new Map();
+const biomarkerAttention = new Map();
 
 registryRaw
   .split('\n')
   .forEach((line, index) => {
-    const name = line.trim();
-    if (name) {
-      biomarkerOrder.set(name, index);
+    const raw = line.trim();
+    if (!raw) return;
+
+    // Count trailing asterisks (max 2)
+    const match = raw.match(/(\*{1,2})$/);
+    const attention = match ? match[1].length : 0;
+    const name = attention > 0 ? raw.slice(0, -attention).trimEnd() : raw;
+
+    biomarkerOrder.set(name, index);
+    if (attention > 0) {
+      biomarkerAttention.set(name, attention);
     }
   });
 
@@ -22,6 +34,15 @@ registryRaw
  */
 export function isRegistered(name) {
   return biomarkerOrder.has(name);
+}
+
+/**
+ * Get the attention level for a biomarker (0, 1, 2, or 3).
+ * @param {string} name
+ * @returns {number}
+ */
+export function getAttentionLevel(name) {
+  return biomarkerAttention.get(name) || 0;
 }
 
 /**
