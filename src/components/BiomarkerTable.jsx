@@ -20,6 +20,8 @@ export function BiomarkerTable({ reports, onImportClick }) {
   const [columnVisibility, setColumnVisibility] = useState({});
   const [selectedBiomarkers, setSelectedBiomarkers] = useState([]);
   const [columnSizing, setColumnSizing] = useState({});
+  const [hideUnits, setHideUnits] = useState(false);
+  const [hideReferences, setHideReferences] = useState(false);
 
   // Transform data to matrix format
   const { columns: reportColumns, rows } = useMemo(
@@ -114,12 +116,12 @@ export function BiomarkerTable({ reports, onImportClick }) {
             <div className="text-xs text-gray-500 font-normal">{report.lab_name}</div>
           </div>
         ),
-        cell: info => <ResultCell value={info.getValue()} />,
+        cell: info => <ResultCell value={info.getValue()} hideUnit={hideUnits} hideReference={hideReferences} />,
       });
     });
 
     return cols;
-  }, [reportColumns, biomarkerColumnSize]);
+  }, [reportColumns, biomarkerColumnSize, hideUnits, hideReferences]);
 
   const table = useReactTable({
     data: filteredRows,
@@ -146,6 +148,36 @@ export function BiomarkerTable({ reports, onImportClick }) {
           onSelectionChange={setSelectedBiomarkers}
         />
         <ColumnToggle table={table} />
+        <div className="flex gap-2 items-center">
+          <button
+            onClick={() => setHideUnits(!hideUnits)}
+            className={`relative group w-10 h-10 border rounded-lg shadow-sm flex items-center justify-center ${
+              hideUnits
+                ? 'bg-gray-200 border-gray-400 shadow-inner'
+                : 'bg-white border-gray-300 hover:bg-gray-50'
+            }`}
+            title="Hide units"
+          >
+            <span className="w-4 h-4 text-gray-600 font-semibold text-sm leading-4 text-center">U</span>
+            <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 hidden group-hover:block bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-20">
+              {hideUnits ? 'Show units' : 'Hide units'}
+            </span>
+          </button>
+          <button
+            onClick={() => setHideReferences(!hideReferences)}
+            className={`relative group w-10 h-10 border rounded-lg shadow-sm flex items-center justify-center ${
+              hideReferences
+                ? 'bg-gray-200 border-gray-400 shadow-inner'
+                : 'bg-white border-gray-300 hover:bg-gray-50'
+            }`}
+            title="Hide references"
+          >
+            <span className="w-4 h-4 text-gray-600 font-semibold text-sm leading-4 text-center">R</span>
+            <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 hidden group-hover:block bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap z-20">
+              {hideReferences ? 'Show references' : 'Hide references'}
+            </span>
+          </button>
+        </div>
         <button
           onClick={onImportClick}
           className="px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"
