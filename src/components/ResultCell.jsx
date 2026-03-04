@@ -8,12 +8,14 @@ export function ResultCell({ value }) {
 
   return (
     <div className="flex flex-col items-center">
-      <span className="font-semibold text-gray-900">{value.result}</span>
-      {value.unit && (
-        <span className="text-xs text-gray-500">{value.unit}</span>
-      )}
+      <span className="inline-flex items-center">
+        <span className="font-semibold text-gray-900 text-[15px]">{value.result}</span>
+        {value.unit && (
+          <span className="text-[11px] text-gray-400 ml-1">{value.unit}</span>
+        )}
+      </span>
       {value.reference && (
-        <span className="text-xs text-gray-400">{value.reference}</span>
+        <span className="text-xs text-gray-400 mt-1">{value.reference}</span>
       )}
     </div>
   );

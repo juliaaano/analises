@@ -217,7 +217,7 @@ export function BiomarkerTable({ reports, onImportClick }) {
                   return (
                     <td
                       key={cell.id}
-                      className={`px-2 py-3 text-sm overflow-hidden ${
+                      className={`px-2 py-1.5 text-sm overflow-hidden ${
                         isBiomarker ? 'text-left' : 'text-center'
                       }`}
                       style={{ width: cell.column.getSize() }}
