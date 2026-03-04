@@ -207,7 +207,7 @@ export function BiomarkerTable({ reports, onImportClick }) {
                   return (
                     <th
                       key={header.id}
-                      className={`relative px-2 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 overflow-hidden ${
+                      className={`relative px-2 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 overflow-hidden shadow-[0_2px_0_0_rgb(156,163,175)] ${
                         isBiomarker ? 'text-left' : ''
                       }`}
                       style={{ width: header.getSize() }}
