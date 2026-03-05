@@ -120,8 +120,8 @@ Taxa Protrombina
 T de Tromboplastina Parcial activ. (aPTT)
 Fibrinogénio
 
-PSA - Antigénio Específico da Próstata
-PSA Livre - Ag. Específico da Próstata
+PSA Total
+PSA Livre
 Razão PSA Livre / PSA Total
 
 Fracção C3 do Complemento
