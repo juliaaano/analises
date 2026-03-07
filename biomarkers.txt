@@ -74,9 +74,8 @@ Desidrogenase Láctica (LDH)
 Creatinaquinase Total (CK Total)
 Enzima Conversora Angiotensina (ECA)
 
-Cuprémia
-Cobre Sérico
-Zinco / Sérico
+Cuprémia / Cobre Sérico*
+Zinco Sérico
 Selénio / no soro
 Chumbo
 Mercúrio no sangue (Hg)
