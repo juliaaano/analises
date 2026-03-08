@@ -7,7 +7,7 @@ Hem. Glob. Média (HGM)
 Conc. Hem. Glob. Média (CHGM)
 Ampl. Distrib. Eritr. (RDW)
 #Série Leucocitária
-Leucócitos*
+Leucócitos**
 Neutrófilos
 Linfócitos
 Monócitos
@@ -19,14 +19,14 @@ Reticulócitos
 Reticulócitos Valor Absoluto
 Hemoglobina Reticulocitária
 Velocidade de Sedimentação (VS)
-Proteína C Reactiva*
+Proteína C Reactiva**
 
 Ferro Sérico / Siderémia
 Capacidade Total Fixação Ferro
 Transferrina
 Indice Saturação da Transferrina
-Ferritina*
-Vitamina B12**
+Ferritina**
+Vitamina B12*
 Ácido Fólico
 Homocisteína*
 
@@ -38,7 +38,7 @@ HbA1c (IFCC)
 Glicémia estimada
 
 Ureia / Urémia
-Creatinina / Creatininémia
+Creatinina / Creatininémia*
 TFGe [CKD-EPI 2009]
 Ácido Úrico
 Uricémia (Cinético Urease)
@@ -57,7 +57,7 @@ Colesterol LDL
 Triglicéridos
 #Colesterol HDL Índice Aterogénico
 Apolipoproteína A1
-Apolipoproteína B
+Apolipoproteína B*
 Lipoproteína a - Lpa
 Apolipoproteína E
 
@@ -84,7 +84,7 @@ Magnésio Eritrociário
 Vitamina D - 25(OH) D Total*
 Vitamina D3 - 1.25 Dihidroxicolecalciferol
 Vitamina A - Retinol
-Vitamina C - Ácido Ascórbico
+Vitamina C - Ácido Ascórbico**
 Vitamina E (Alfa Tocoferol)
 Vitamina K1
 Vitamina B1 - Pirofosfato de Tiamina
@@ -96,8 +96,8 @@ Tiroxina Livre (FT4)
 Triiodotironina Livre (FT3)
 FSH - Hormona Folículoestimulante
 LH - Hormona Luteotrófica
-17 Beta Estradiol**
-Testosterona Total / Plasmática (TT)
+17 Beta Estradiol*
+Testosterona Total / Plasmática (TT)*
 Testosterona Livre
 Glob. Lig. Hormonas Sexuais - SHBG**
 Dihidrotestosterona - DHT
@@ -186,7 +186,7 @@ Urina - Proteínas Totais
 Urina - Albumina
 Microalbuminúria Micção (Ocasional)
 Microalbuminúria (Turbidimetria)
-Razão Albuminúria/Creatinúria
+Razão Albuminúria/Creatinúria*
 Urina - Globulina Alfa 1
 Urina - Globulina Alfa 2
 Urina (Microbiologia) Gram
