@@ -71,11 +71,12 @@ Fosfatémia (Fosfomolibdato)
 Fósforo Inorgânico
 
 Desidrogenase Láctica (LDH)
-Creatinaquinase Total (CK Total)
+Creatinaquinase Total (CK Total)**
 Enzima Conversora Angiotensina (ECA)
 
 Cuprémia / Cobre Sérico*
 Zinco Sérico
+Zinco Eritrocitário
 Selénio / no soro
 Chumbo
 Mercúrio no sangue (Hg)
