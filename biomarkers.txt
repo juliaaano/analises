@@ -133,6 +133,7 @@ Imunoglobulina D Sérica
 Imunoglobulina E Total
 Cadeias Kappa
 Cadeias Lambda
+Albumina
 Globulina Alfa 1
 Globulina Alfa 2
 Globulina Beta 1
@@ -184,7 +185,6 @@ Urina - (Sedimento) - Células Epiteliais
 Urina - (Sedimento) - Leucócitos
 Urina - (Sedimento) - Eritrócitos
 Urina - Proteínas Totais
-Urina - Albumina
 Microalbuminúria Micção (Ocasional)
 Microalbuminúria (Turbidimetria)
 Razão Albuminúria/Creatinúria*
