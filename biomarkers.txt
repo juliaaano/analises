@@ -108,7 +108,7 @@ DHEA-SO4 - Dehidroepiandrosterona
 Paratormona - iPTH
 Ac. Anti-Tiroperoxidase (anti-TPO)
 Ac. Anti-Tiroglobulina (anti-TG)
-Cortisol Plamático Basal
+Cortisol Plasmático Basal
 ACTH - Adrenocorticotrofina
 hGH - Hormona do Crescimento
 IGF 1 - Somatomedina C (IGF1) Basal
