@@ -39,6 +39,12 @@ This is the repeatable process for turning a new lab report PDF into a JSON file
 5. **New biomarkers not yet in the registry**: if a test has no match in `biomarkers.txt` (even approximately), ask the user whether to add it (and where it should sort) before inventing a mapping. Don't silently rename it to fit an existing entry.
 6. **Flag anything uncertain before writing the JSON** — don't guess silently. In practice this has included: a unit that's physically implausible for the test (e.g. a creatinine result printed with a flow-rate unit, clearly a copy-paste template bug in the lab's own PDF), a reference range given as categorical bands instead of a simple range (e.g. Vitamin D's Deficiência/Insuficiência/Suficiência/Toxicidade bands), and a lab name only present as a logo image (crop + view the image to read it, then confirm the naming convention against prior imports, e.g. "Germano de Sousa" → `lab_name: "CUF / Germano"`).
 7. **Units: don't silently change them.** Write each unit as the PDF prints it. If a unit would differ from the PDF (casing, symbols, spacing, anything) or from the unit already used for that biomarker in the existing `data/health_data*.json` files, highlight the difference and ask the user what to do before writing it.
+   - **Accepted deviations** (approved by the user; no need to flag again, and the verification agent should not report them):
+     - Vitamin D reference: only the Suficiência band (`30 - 100`), not the full band text.
+     - Superscript exponents written as `^` with no space after "x": `x10^6/μl`, `x10^3/μl`.
+     - Micro sign written as Greek `μ` (U+03BC), not the PDF's `µ` (U+00B5).
+     - TFGe decimal comma written as a point: `ml/min/1.73 m2`.
+     - Urine Hemoglobina unit left `""` even when the PDF prints `mg/dL`.
 8. **Validate before finishing**:
    - `python3 -c "import json, jsonschema; jsonschema.validate(json.load(open('data/<new>.json')), json.load(open('data/health_data_schema.json')))"`
    - Check every `name` in the new JSON appears in `biomarkers.txt` (after stripping trailing asterisks) so nothing shows the amber "unregistered" warning unexpectedly.
