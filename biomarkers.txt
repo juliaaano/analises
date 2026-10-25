@@ -39,7 +39,10 @@ Glicémia estimada
 
 Ureia / Urémia
 Creatinina / Creatininémia*
+Cistatina C Sérica
 TFGe [CKD-EPI 2009]
+Creatininúria (amostra ocasional)
+Clearance Creatinina (Micção ocasional)
 Ácido Úrico
 Uricémia (Cinético Urease)
 
