@@ -58,7 +58,7 @@ Colesterol Total*
 Colesterol HDL
 Colesterol LDL
 Triglicéridos
-#Colesterol HDL Índice Aterogénico
+Colesterol HDL Índice Aterogénico
 Apolipoproteína A1
 Apolipoproteína B*
 Lipoproteína a - Lpa
@@ -187,7 +187,7 @@ Urina - Leucócitos
 Urina - (Sedimento) - Células Epiteliais
 Urina - (Sedimento) - Leucócitos
 Urina - (Sedimento) - Eritrócitos
-Urina - Proteínas Totais
+Proteínas Totais (soro)
 Microalbuminúria Micção (Ocasional)
 Microalbuminúria (Turbidimetria)
 Razão Albuminúria/Creatinúria*
