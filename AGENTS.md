@@ -10,8 +10,8 @@ A React SPA that displays health biomarker data from laboratory reports in a mat
 
 ## Data Source
 - The app itself has no built-in data loading — data is imported at runtime via the paste modal, and held in React state (not persisted between sessions)
-- JSON format with a `reports` array, validated against `data/health_data_schema.json`
-- `data/` holds the source PDFs, the JSON schema, and the JSON produced from each import (see PDF Import Workflow below) — these are repo-tracked reference data, not loaded by the app automatically
+- JSON format: a `reports` array; each report has `lab_name`, `date` and `results`; each result has `name`, `result`, `unit` and `reference` (all strings). The paste modal only checks that `reports` is an array
+- `data/` holds the source PDFs and the JSON produced from each import (see PDF Import Workflow below). It is gitignored (private data, local only) and not loaded by the app automatically
 
 ## Biomarker Registry
 - `biomarkers.txt` at project root defines the display order of biomarkers
@@ -19,11 +19,12 @@ A React SPA that displays health biomarker data from laboratory reports in a mat
 - A trailing `*` or `**` on a line sets an attention level (1 = amber, 2 = red) used to highlight that biomarker's row regardless of its value; the asterisks are stripped from the displayed/matched name
 - Imported at build time via Vite `?raw` import (inlined into bundle, no runtime fetch)
 - Parsed by `src/utils/biomarkerRegistry.js`
+- There is no comment syntax: a line starting with `#` is read as a literal name, so it matches no data row (a data row with the same name minus the `#` shows as unregistered)
 - Biomarkers in imported data that are **not** in the registry appear last (sorted alphabetically) with visual warnings: amber-tinted row, warning icon, and tooltip
 
 ## PDF Import Workflow
 
-This is the repeatable process for turning a new lab report PDF into a JSON file matching `data/health_data_schema.json`.
+This is the repeatable process for turning a new lab report PDF into a JSON file in the format described under Data Source.
 
 1. **Place the PDF** in `data/pdf/` (keep the lab's original filename, e.g. `Rel8143105_10_10_2026.pdf`).
 2. **Extract with the `pdf` skill.** Use `pdfplumber` (install via `pip3 install pdfplumber` if missing — there's no `pdftotext` CLI in this environment) to pull text per page:
@@ -34,7 +35,8 @@ This is the repeatable process for turning a new lab report PDF into a JSON file
            print(page.extract_text())
    ```
    For anything ambiguous (merged columns, odd units, superscript/subscript glyphs, a logo-only lab name with no text layer), render the page to an image (`page.to_image(resolution=200).save(...)`) and read it visually — text extraction alone can misalign columns (e.g. a unit from one row bleeding into the row above/below).
-3. **Map every test name to the canonical name in `biomarkers.txt`.** Strip trailing `*`/`**` from registry lines (those are attention-level markers, not part of the name — see `src/utils/biomarkerRegistry.js`). Match on meaning, not literal PDF wording — labs abbreviate inconsistently across reports (e.g. PDF's "V.G.M." → registry's "Vol. Glob. Médio (VGM)", "Siderémia" → "Ferro Sérico / Siderémia", "Hemoglobina Glicada (A1c) [NGSP]" → "HbA1c (NGSP/DCCT)"). Preserve the registry's exact spelling even when it contains a typo (e.g. registry has "Cortisol **Plamático** Basal", missing the 's' — use that exact string so the row matches the registry and isn't flagged as unregistered).
+3. **Map every test name to the canonical name in `biomarkers.txt`.** Strip trailing `*`/`**` from registry lines (those are attention-level markers, not part of the name — see `src/utils/biomarkerRegistry.js`). Match on meaning, not literal PDF wording — labs abbreviate inconsistently across reports (e.g. PDF's "V.G.M." → registry's "Vol. Glob. Médio (VGM)", "Siderémia" → "Ferro Sérico / Siderémia", "Hemoglobina Glicada (A1c) [NGSP]" → "HbA1c (NGSP/DCCT)"). Copy the registry's exact spelling (accents, punctuation, typos included) so the row matches the registry and isn't flagged as unregistered.
+   - **White-cell differentials:** labs print each differential both as % and as an absolute count. Record both: the % under the plain name (e.g. `Neutrófilos`) and the absolute count as `Neutrófilos (valor absoluto)`, likewise for Linfócitos, Monócitos, Eosinófilos and Basófilos. Each value, unit and reference range is as printed; some labs print a reference range for only one of the two.
 4. **Pending/in-progress tests**: labs often list tests still being processed in a section like "Análises em curso" with no result yet. Add one entry per pending test with `result`, `unit`, and `reference` all set to `""` (empty string), using just the canonical biomarker name. When a follow-up PDF arrives with the completed results, update those same entries in place rather than duplicating them.
 5. **New biomarkers not yet in the registry**: if a test has no match in `biomarkers.txt` (even approximately), ask the user whether to add it (and where it should sort) before inventing a mapping. Don't silently rename it to fit an existing entry.
 6. **Flag anything uncertain before writing the JSON** — don't guess silently. In practice this has included: a unit that's physically implausible for the test (e.g. a creatinine result printed with a flow-rate unit, clearly a copy-paste template bug in the lab's own PDF), a reference range given as categorical bands instead of a simple range (e.g. Vitamin D's Deficiência/Insuficiência/Suficiência/Toxicidade bands), and a lab name only present as a logo image (crop + view the image to read it, then confirm the naming convention against prior imports, e.g. "Germano de Sousa" → `lab_name: "CUF / Germano"`).
@@ -46,10 +48,10 @@ This is the repeatable process for turning a new lab report PDF into a JSON file
      - TFGe decimal comma written as a point: `ml/min/1.73 m2`.
      - Urine Hemoglobina unit left `""` even when the PDF prints `mg/dL`.
 8. **Validate before finishing**:
-   - `python3 -c "import json, jsonschema; jsonschema.validate(json.load(open('data/<new>.json')), json.load(open('data/health_data_schema.json')))"`
+   - Check the structure: `python3 -c "import json; d=json.load(open('data/<new>.json')); assert isinstance(d['reports'], list) and all({'lab_name','date','results'} <= r.keys() and all({'name','result','unit','reference'} <= x.keys() for x in r['results']) for r in d['reports']); print('ok')"`
    - Check every `name` in the new JSON appears in `biomarkers.txt` (after stripping trailing asterisks) so nothing shows the amber "unregistered" warning unexpectedly.
    - Check for duplicate names within the same report.
-9. **Independent verification.** Dispatch a separate agent with no access to the extraction work's context to re-derive the PDF's values from scratch (its own script/tooling pass) and diff them against the finished JSON, including the schema check and registry-name check. Have it report findings only — do not auto-apply fixes; review discrepancies yourself and present them to the user.
+9. **Independent verification.** Dispatch a separate agent with no access to the extraction work's context to re-derive the PDF's values from scratch (its own script/tooling pass) and diff them against the finished JSON, including the structure check and registry-name check. Have it report findings only — do not auto-apply fixes; review discrepancies yourself and present them to the user.
 
 ## Key Conventions
 
@@ -115,9 +117,8 @@ npm run lint    # Run ESLint
   workflows/
     deploy.yml            # GitHub Actions workflow for GitHub Pages
 biomarkers.txt              # Biomarker registry (display order, attention levels)
-data/
+data/                    # Gitignored: private, local only
   pdf/                   # Source lab report PDFs
-  health_data_schema.json # JSON schema for imported report data
   health_data_*.json      # JSON produced by the PDF Import Workflow, one per import
 src/
   components/           # React components
