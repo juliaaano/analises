@@ -9,12 +9,18 @@ Ampl. Distrib. Eritr. (RDW)
 #Série Leucocitária
 Leucócitos**
 Neutrófilos
+Neutrófilos (valor absoluto)
 Linfócitos
+Linfócitos (valor absoluto)
 Monócitos
+Monócitos (valor absoluto)
 Eosinófilos
+Eosinófilos (valor absoluto)
 Basófilos
+Basófilos (valor absoluto)
 #Série Plaquetária
 Plaquetas
+Vol. Plaq. Médio (VPM)
 Reticulócitos
 Reticulócitos Valor Absoluto
 Hemoglobina Reticulocitária
@@ -53,6 +59,8 @@ Fosfatase Alcalina
 Bilirrubinémia Total
 Bilirrubinémia Directa
 Bilirrubinémia Indirecta
+Amilase
+Lipase
 
 Colesterol Total*
 Colesterol HDL
@@ -187,11 +195,10 @@ Urina - Leucócitos
 Urina - (Sedimento) - Células Epiteliais
 Urina - (Sedimento) - Leucócitos
 Urina - (Sedimento) - Eritrócitos
+Urina - (Sedimento) - Outros Elementos
 Proteínas Totais (soro)
 Microalbuminúria Micção (Ocasional)
 Microalbuminúria (Turbidimetria)
 Razão Albuminúria/Creatinúria*
-Urina - Globulina Alfa 1
-Urina - Globulina Alfa 2
 Urina (Microbiologia) Gram
 Urina (Microbiologia) - Exame Cultural
