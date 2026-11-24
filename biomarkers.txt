@@ -9,7 +9,7 @@ Ampl. Distrib. Eritr. (RDW)
 #Série Leucocitária
 Leucócitos**
 Neutrófilos
-Neutrófilos (valor absoluto)
+Neutrófilos (valor absoluto)**
 Linfócitos
 Linfócitos (valor absoluto)
 Monócitos
@@ -25,12 +25,12 @@ Reticulócitos
 Reticulócitos Valor Absoluto
 Hemoglobina Reticulocitária
 Velocidade de Sedimentação (VS)
-Proteína C Reactiva**
+Proteína C Reactiva
 
 Ferro Sérico / Siderémia
 Capacidade Total Fixação Ferro
-Transferrina
-Indice Saturação da Transferrina
+Transferrina*
+Indice Saturação da Transferrina**
 Ferritina**
 Vitamina B12*
 Ácido Fólico / B9
@@ -46,9 +46,9 @@ Glicémia estimada
 Ureia / Urémia
 Creatinina / Creatininémia*
 Cistatina C Sérica
-TFGe [CKD-EPI 2009]
+TFGe [CKD-EPI 2009]*
 Creatininúria (amostra ocasional)
-Clearance Creatinina (Micção ocasional)
+Clearance Creatinina (Micção ocasional)*
 Ácido Úrico
 Uricémia (Cinético Urease)
 
@@ -57,14 +57,14 @@ ALT / TGP - Alanina Aminotransferase
 Gama-Glutamiltransferase - GGT
 Fosfatase Alcalina
 Bilirrubinémia Total
-Bilirrubinémia Directa
+Bilirrubinémia Directa*
 Bilirrubinémia Indirecta
 Amilase
 Lipase
 
 Colesterol Total*
 Colesterol HDL
-Colesterol LDL
+Colesterol LDL*
 Triglicéridos
 Colesterol HDL Índice Aterogénico
 Apolipoproteína A1
@@ -82,7 +82,7 @@ Fosfatémia (Fosfomolibdato)
 Fósforo Inorgânico
 
 Desidrogenase Láctica (LDH)
-Creatinaquinase Total (CK Total)**
+Creatinaquinase Total (CK Total)*
 Enzima Conversora Angiotensina (ECA)
 
 Cuprémia / Cobre Sérico*
@@ -96,12 +96,12 @@ Magnésio Eritrociário
 Vitamina D - 25(OH) D Total*
 Vitamina D3 - 1.25 Dihidroxicolecalciferol
 Vitamina A - Retinol
-Vitamina C - Ácido Ascórbico**
+Vitamina C - Ácido Ascórbico*
 Vitamina E (Alfa Tocoferol)
 Vitamina K1
 Vitamina B1 - Pirofosfato de Tiamina
 Vitamina B2 (FAD)
-Vitamina B6 (Fosfato de Piridoxal)
+Vitamina B6 (Fosfato de Piridoxal)**
 
 Tiroestimulina TSH
 Tiroxina Livre (FT4)
@@ -110,8 +110,8 @@ FSH - Hormona Folículoestimulante
 LH - Hormona Luteotrófica
 17 Beta Estradiol*
 Testosterona Total / Plasmática (TT)*
-Testosterona Livre
-Glob. Lig. Hormonas Sexuais - SHBG**
+Testosterona Livre*
+Glob. Lig. Hormonas Sexuais - SHBG*
 Dihidrotestosterona - DHT
 Sulfato de Dehidroepiandrosterona
 DHEA - Dehidroepiandrosterona
@@ -126,7 +126,7 @@ IGF 1 - Somatomedina C (IGF1) Basal
 Prolactina
 
 Tempo Protrombina (TP)
-Tempo Protrombina INR
+Tempo Protrombina INR*
 Taxa Protrombina
 T de Tromboplastina Parcial activ. (aPTT)
 Fibrinogénio
@@ -174,7 +174,7 @@ Ac. Anti-CMV (IgM)
 Reacção VDRL
 Antigénio HBs
 Anticorpo HBs
-Anticorpo HBc Total
+Anticorpo HBc Total*
 Anticorpo HBe
 Anticorpo HCV
 Anticorpo Anti-Parvovírus IgG
@@ -199,6 +199,6 @@ Urina - (Sedimento) - Outros Elementos
 Proteínas Totais (soro)
 Microalbuminúria Micção (Ocasional)
 Microalbuminúria (Turbidimetria)
-Razão Albuminúria/Creatinúria*
+Razão Albuminúria/Creatinúria
 Urina (Microbiologia) Gram
 Urina (Microbiologia) - Exame Cultural
